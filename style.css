@@ -1,0 +1,24 @@
+* {
+    font-size: 0px;
+    margin: 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+header > .container {
+    height: 90px;
+    border: 1px green solid;
+}
+
+.hero {
+    height: 820px;
+    position: relative;
+    /* top: -90px; */
+    border: 1px red solid;
+    background-image: url(/assets/img/hero-bg.jpg);
+    background-position: center 0;
+    z-index: -1;
+}
