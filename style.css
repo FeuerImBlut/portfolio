@@ -12,6 +12,7 @@
 }
 
 .section-title {
+    margin: 100px auto 0;
     color: var(--gold);
     font-family: Merriweather;
     font-weight: bold;
@@ -19,7 +20,33 @@
     line-height: 80px; 
     width: 700px;
 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
 }
+
+.section-title::before, .section-title::after {
+    content: "";
+    height: 2px;
+    background-color: var(--gold);
+    display: inline-block;
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    vertical-align: middle;
+}
+
+    .section-title:before {
+    right: 15px;
+    margin: 0 0 0 -100%;
+   }
+   .section-title:after {
+    left: 15px;
+    margin: 0 -100% 0 0;
+   }
+
+
 
 button {
     color: var(--black);
@@ -59,29 +86,32 @@ header > .container {
     height: 90px;
     display: flex;
     line-height: 50px;
+    align-items: center;
 }
+
+
 
 .logo {
     width: 50px;
     height: 40px;
+    margin-left: 20px;
+
 }
 
 .nav-top {
     display: flex;
     width: 500px;
     height: 50px;
+    margin-left: auto;
+    justify-content: center;
+    column-gap: 30px;
 }
 
 .language-panel {
     width: 70px;
     height: 50px;
+    margin-right: 20px;
 }
-
-/* .nav-top, .language-panel {
-    color: var(--white);
-    font-family: Inter;
-    font-size: 20px;
-} */
 
 .hero {
     height: 820px;
@@ -128,16 +158,24 @@ h1 {
     flex-direction: column;
 }
 
+
+
 .skills-item > img{
     height: 50px;
+    margin-bottom: 50px;
 }
 
-.skills-item > h3 {
-
+.skills-item > h4 {
+    font-weight: 700px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .skills-item > p {
-
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
 }
 
 .portfolio {
@@ -192,3 +230,34 @@ h1 {
     background-color: transparent;
     margin: auto;
 }
+
+.price {
+    height: 845px;
+}
+
+.price-items {
+    box-sizing: border-box;
+    border: green 1px solid;
+    height: 505px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-items > div {
+    box-sizing: border-box;
+    border: red 1px solid;
+    width: 450px;
+    height: 100%;
+}
+
+.contacts {
+    height: 700px;
+    background-image: url(assets/img/contacts.png);
+    background-size: contain;
+}
+
+footer {
+    height: 150px;
+    display: flex;
+}
+
