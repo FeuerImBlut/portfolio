@@ -183,7 +183,7 @@ h1 {
 }
 
 .portfolio-buttons {
-    margin: 0 auto;
+    margin: 0 auto 60px;
     width: 895px;
     height: 55px;
     display: flex;
@@ -198,8 +198,9 @@ h1 {
 
 .portfolio-items {
     border: 1px solid green;
-    width: 100%;
+    width: 1400px;
     height: 1145px;
+    margin: 0 auto;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -218,8 +219,12 @@ h1 {
 
 .video-block {
     height: 705px;
+    width: 1400px;
     background-image: url(assets/img/video-player.png);
     background-size: cover;
+    margin: 60px auto 0;
+    display: flex;
+    align-items: center;
 }
 
 .video-block > button {
@@ -239,8 +244,11 @@ h1 {
     box-sizing: border-box;
     border: green 1px solid;
     height: 505px;
+    width: 1400px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 60px auto 0;
 }
 
 .price-items > div {
@@ -248,12 +256,53 @@ h1 {
     border: red 1px solid;
     width: 450px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 43px 0;
+    row-gap: 20px;
+}
+
+.price-items > div > h3 {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 56px;
+    color: var(--white);
+}
+
+.price-items > div > p {
+    font-family: Merriweather;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--gold);    
+}
+
+.price-items > div > div {
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 36px;
+    color: var(--white);
+    text-align: center;
+}
+
+.price-items > div > button {
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--black);
+    margin-top: 20px;
 }
 
 .contacts {
     height: 700px;
     background-image: url(assets/img/contacts.png);
     background-size: contain;
+}
+
+.contacts-block > h2 {
+
 }
 
 footer {
