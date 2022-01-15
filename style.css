@@ -34,7 +34,8 @@
     width: 100%;
     z-index: -1;
     position: relative;
-    vertical-align: middle;
+    /* vertical-align: middle; */
+    bottom: 12px;
 }
 
     .section-title:before {
@@ -224,6 +225,7 @@ h1 {
     font-weight: 700px;
     text-align: center;
     margin-bottom: 20px;
+    line-height: 40px;
 }
 
 .skills-item > p {
@@ -231,6 +233,7 @@ h1 {
     font-size: 18px;
     line-height: 36px;
     text-align: center;
+    padding: 0 20px;
 }
 
 .portfolio {
@@ -294,7 +297,7 @@ h1 {
 }
 
 .price-items {
-height: 505px;
+    height: 505px;
     width: 1400px;
     display: flex;
     justify-content: space-between;
@@ -304,13 +307,12 @@ height: 505px;
 
 .price-items > div {
     box-sizing: border-box;
-    border: 2px solid var(--gold);
+    border: 3px solid var(--gold);
     width: 450px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 43px 0;
+    padding: 40px 0;
     row-gap: 20px;
 }
 
@@ -433,6 +435,9 @@ footer > div > div{
     align-items: center;
     justify-content: space-between;
     width: 188px;
+}
+a > img {
+    display: block;
 }
 
 footer > a:nth-child(1) {
