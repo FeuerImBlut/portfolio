@@ -18,7 +18,7 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 80px; 
-    width: 700px;
+    max-width: 700px;
 
     position: relative;
     z-index: 1;
@@ -130,7 +130,7 @@ section {
 }
 
 .container {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
   }
 
@@ -151,7 +151,7 @@ header > .container {
 }
 
 .nav-top {
-    width: 500px;
+    max-width: 500px;
     height: 50px;
     margin-left: auto;
 
@@ -197,24 +197,23 @@ h1 {
 
 .hero > p {
     line-height: 40px;
-    width: 470px;
+    max-width: 470px;
     margin: 10px 0 0 80px;
 }
 
 .hero > button {
-    color: var(--black);
-    margin: 25px 0 0 80px;
+    margin: 60px 0 0 0;
 }
 
 .skills {
-    width: 1440px;
+    width: 100%;
     height: 482px;
 }
 
 .skills-items {
     display: flex;
     justify-content: space-between;
-    width: 1400px;
+    max-width: 1400px;
     height: 242px;
     margin: 60px auto 0;
 }
@@ -223,6 +222,7 @@ h1 {
     width: 320px;
     display: flex;
     flex-direction: column;
+    height: 244px;
 }
 
 
@@ -233,7 +233,7 @@ h1 {
 }
 
 .skills-item > h4 {
-    font-weight: 700px;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 20px;
     line-height: 40px;
@@ -253,7 +253,7 @@ h1 {
 
 .portfolio-buttons {
     margin: 60px auto 60px;
-    width: 895px;
+    max-width: 895px;
     height: 55px;
     display: flex;
     justify-content: space-between;
@@ -266,7 +266,7 @@ h1 {
 }
 
 .portfolio-items {
-    width: 1400px;
+    max-width: 1400px;
     height: 1145px;
     margin: 0 auto;
     display: flex;
@@ -286,7 +286,7 @@ h1 {
 
 .video-block {
     height: 705px;
-    width: 1400px;
+    max-width: 1400px;
     background-image: url(assets/img/video-player.jpg);
     background-size: cover;
     margin: 60px auto 0;
@@ -309,7 +309,7 @@ h1 {
 
 .price-items {
     height: 505px;
-    width: 1400px;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -366,7 +366,7 @@ h1 {
 }
 
 .contacts-block {
-    width: 450px;
+    max-width: 450px;
     height: 445px;
     margin: 60px 20px 0 auto;
 }
@@ -421,7 +421,7 @@ footer {
     font-family: Inter;
     font-size: 20px;
     height: 150px;
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px 0;
     align-items: center;
@@ -457,4 +457,114 @@ footer  a:nth-child(1) {
 
 footer  a:nth-child(2) {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+
+.container {
+    max-width: 768px;
+    min-width: 320px;
+    padding: 0 60px;
+}
+
+body {
+    background-image: url(assets/img/hero-bg-small.jpg);
+    background-size: auto 590px;
+}
+
+
+.hero {
+    height: 500px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 200%;
+    margin: 78px 0 0 0;
+}
+
+.hero > p {
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 390px;
+}
+
+.section-title {
+    max-width: 364px;
+    margin-top: 80px;
+}
+
+.skills {
+    height: 729px;
+}
+
+.skills-items {
+    max-width: 644px;
+    height: 484px;
+    margin: 36px auto 0;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.skills-item {
+    height: 224px;
+}
+
+.skills-item > img {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.skills-item > p {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 10px;
+}
+
+.portfolio {
+    height: 3870px;
+}
+.portfolio-buttons {
+    max-width: 445px;
+    height: 115px;
+    margin: 50px auto 60px;
+    flex-wrap: wrap;
+}
+
+.portfolio-items {
+    height: 3485px;
+    max-width: 450px;
+}
+
+.video {
+    height: 628px;
+}
+
+.video-block {
+    height: 418px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
+}
+
+.price {
+    height: 1905px;
+}
+
+.price-items {
+    max-width: 420px;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+footer {display: none;
+}
+
+.contacts {
+};
+
+
+
 }
