@@ -180,6 +180,11 @@ li {
     margin-right: 20px;
 }
 
+.language-panel:hover {
+    color: var(--gold);
+    cursor: pointer;
+}
+
 .burger {
     display: none;
 }
@@ -680,10 +685,8 @@ opacity: 0;}
     justify-content: space-between;
     height: 429px;
     width: 150px;
-    border: 1px red solid;
     margin-top: 134px;
     margin-left: 127px;
-    /* z-index: 13; */
 }
 
 .nav-top {
@@ -717,4 +720,10 @@ opacity: 0;}
     transition: ease-in 0.3s;
 }
 
+}
+
+@media (max-width: 620px) {
+    .nav-top {
+        width: 100vw;
+    }
 }
