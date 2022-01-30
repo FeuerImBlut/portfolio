@@ -1,3 +1,5 @@
+import i18Obj from './translation.js';
+
 /*burger menu*/
 const burger = document.querySelector('.burger');
 const shadow = document.querySelector('.shadow');
@@ -24,7 +26,7 @@ buttons.forEach((element) => {
 
 function galleryUpdate(element) {
     for (let i = 0; i < gallery.length; i++) {
-        gallery[i].src = `assets/img/${element.innerHTML}/${i + 1}.jpg`;
+        gallery[i].src = `assets/img/${element.dataset['i18n']}/${i + 1}.jpg`;
         buttons.forEach((button) => {
             button.classList.remove('active');
         });
@@ -43,4 +45,34 @@ function preload() {
 }
 
 /*internationalisation*/
+const languageSwitcher = document.querySelector('.language-panel');
+const translationTextArr = document.querySelectorAll('[data-i18n]');
+let language = 'en';
 
+languageSwitcher.addEventListener('click', getTranslate);
+
+// translationTextArr.style.transition = 'ease-in 0.3s';
+
+function getTranslate() {
+    // language == 'en' ? {language = 'ru'} : language = 'en';
+    if (language == 'en') {
+        language = 'ru';
+    document.querySelector('.language-panel > span:nth-child(1)').style.color = 'var(--white)';
+    document.querySelector('.language-panel > span:nth-child(3)').style.color = 'var(--gold)';
+    
+    }
+    else {
+        document.querySelector('.language-panel > span:nth-child(3)').style.color = 'var(--white)';
+    document.querySelector('.language-panel > span:nth-child(1)').style.color = 'var(--gold)';
+        language = 'en';
+    }
+
+    translationTextArr.forEach(element => {
+        element.textContent = i18Obj[language][element.dataset['i18n']];
+        if (element.placeholder) {
+            element.placeholder = i18Obj[language][element.dataset['i18n']];
+            element.textContent = '';
+          }
+    });
+}
+// getTranslate();

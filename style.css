@@ -177,6 +177,8 @@ li {
     width: 70px;
     height: 50px;
     margin-right: 20px;
+    margin-left: 10px;
+    transition: ease-in 0.3s;
 }
 
 .language-panel:hover {
