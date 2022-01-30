@@ -100,7 +100,7 @@ button:hover,
     color: var(--white);
 }
 
-.portfolio-buttons > button:focus-within {
+.portfolio-buttons > button.active {
     background-color: var(--gold);
     color: var(--black);
 }
@@ -114,7 +114,6 @@ html {
     font-size: 0;
     background-color: var(--black);
     scroll-behavior: smooth;
-
 }
 
 
