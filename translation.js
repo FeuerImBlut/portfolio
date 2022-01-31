@@ -40,7 +40,7 @@ const i18Obj = {
       'send-message': 'Send message',
       'e-mail' : 'E-mail',
       'phone' : 'Phone',
-      'messsage' : 'Message'
+      'message' : 'Message'
     },
     'ru': {
       'skills': 'Навыки',

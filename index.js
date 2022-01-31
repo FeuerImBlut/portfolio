@@ -47,14 +47,15 @@ function preload() {
 /*internationalisation*/
 const languageSwitcher = document.querySelector('.language-panel');
 const translationTextArr = document.querySelectorAll('[data-i18n]');
-let language = 'en';
+let language;
+if (localStorage.getItem('language')) {
+    language = localStorage.getItem('language');
+}
+else {let language = 'en';}
 
 languageSwitcher.addEventListener('click', getTranslate);
 
-// translationTextArr.style.transition = 'ease-in 0.3s';
-
 function getTranslate() {
-    // language == 'en' ? {language = 'ru'} : language = 'en';
     if (language == 'en') {
         language = 'ru';
     document.querySelector('.language-panel > span:nth-child(1)').style.color = 'var(--white)';
@@ -77,9 +78,10 @@ function getTranslate() {
 }
 
 /*light-dark theme*/
+let theme = '';
 const themeSwitcher = document.querySelector('.theme');
 const themeArray = [document.querySelector('html'),
-                document.querySelector('.section-title'),
+                ...document.querySelectorAll('.section-title'),
                 document.querySelector('.portfolio-buttons'),
                 ...document.querySelectorAll('.skills-item'),
                 burger,
@@ -91,7 +93,32 @@ const themeArray = [document.querySelector('html'),
 themeSwitcher.addEventListener('click', changeTheme);
 
 function changeTheme() {
+    theme = (theme == 'dark' || theme == '') ? 'light' : 'dark';
     themeArray.forEach(element => {
         element.classList.toggle('light');
     });
 }
+
+/*local storage*/
+function setLocalStorage() {
+    let langTemp = (language == 'en') ? 'ru' : 'en';
+    localStorage.setItem('language', langTemp);
+    localStorage.setItem('theme', theme);
+  }
+
+  function getLocalStorage() {
+    if(localStorage.getItem('language')) {
+      const lang = localStorage.getItem('language');
+      getTranslate(lang);
+    }
+    if(localStorage.getItem('theme')) {
+        theme = localStorage.getItem('theme');
+        if (theme == 'light') {
+            changeTheme();
+            theme = (theme == 'dark') ? 'light' : 'dark';
+        }
+    }
+  }
+
+window.addEventListener('beforeunload', setLocalStorage);
+window.addEventListener('load', getLocalStorage);
