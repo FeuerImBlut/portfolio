@@ -75,4 +75,23 @@ function getTranslate() {
           }
     });
 }
-// getTranslate();
+
+/*light-dark theme*/
+const themeSwitcher = document.querySelector('.theme');
+const themeArray = [document.querySelector('html'),
+                document.querySelector('.section-title'),
+                document.querySelector('.portfolio-buttons'),
+                ...document.querySelectorAll('.skills-item'),
+                burger,
+                document.querySelector('.nav-top'),
+                themeSwitcher,
+                document.querySelector('.price-items')
+                ];
+
+themeSwitcher.addEventListener('click', changeTheme);
+
+function changeTheme() {
+    themeArray.forEach(element => {
+        element.classList.toggle('light');
+    });
+}
